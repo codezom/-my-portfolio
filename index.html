@@ -1,0 +1,75 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+
+        <div class="nav">
+            <div class="left">
+                <div class="logo">
+                    <img src="skull.png" alt="">
+                    <!-- <h3 class="h3">Monkes</h3> -->
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="#">Me</a></li>
+                        <li><a href="#">Projects</a></li>
+                        <li><a href="#">skills</a></li>
+                        <li><a href="#">other</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- main -->
+         <main>
+            <div class="main">
+                <img src="cover.png" alt="" id="main_img">
+                <div class="text-content">
+                <h1>Hi , There</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est vel alias pariatur enim iure neque excepturi placeat cumque, ex perferendis?</p>
+                </div>
+                
+            </div>
+            <div class="buttons">
+                <button type="submit" class="btn btn1">Read more...</button>
+                <button type="submit" class="btn btn2"><a href="https://codezom.github.io/ball-game/">Other projects</a></button>
+                <button type="submit" class="btn btn2 btn3  " id="btn2">Pause Audio</button>
+                <div class="audio">
+                    <audio id="ad1" controls autoplay loop >
+                        <source src="soviet-ww2-song.mp3" >
+                    </audio>
+                </div>
+            </div>
+         </main>
+    </div>
+    <script>
+        const img1 = document.getElementById('main_img');
+    const btn2 = document.getElementById('btn2');
+    const ad1 = document.getElementById('ad1');
+
+    let isPlaying = false; // Track play state
+
+    // Toggle audio on button click
+    btn2.addEventListener('click', () => {
+        if (isPlaying) {
+            ad1.pause();
+            img1.style.animationPlayState = "paused";
+            img1.style.filter = "grayscale(100%)";
+        } else {
+            ad1.play();
+            img1.style.animationPlayState = "running";
+            img1.style.filter = "grayscale(0%)";
+        }
+        isPlaying = !isPlaying; // Flip play state
+    });
+
+    // Resume audio when mouse leaves;
+    </script>
+</body>
+</html>
